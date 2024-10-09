@@ -19,7 +19,7 @@ $body = "This HTTP triggered function executed successfully. Pass a name in the 
 #Connect to SharePoint Online App Catalog site
 Connect-PnPOnline -Url $SiteUrl -ManagedIdentity -UserAssignedManagedIdentityClientId $AppId
 
-Add-PnPApp -Path ./aces_packages/demo-ace-1.sppkg -Publish -SkipFeatureDeployment
+Add-PnPApp -Path provision-tenant/aces-packages/demo-ace-1.sppkg -Publish -SkipFeatureDeployment
 
 # Associate values to output bindings by calling 'Push-OutputBinding'.
 Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
