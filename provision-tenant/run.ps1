@@ -35,7 +35,7 @@ try {
     
     # Creating requested site
     Write-Host "Creating new site."
-    New-PnPSite -Type CommunicationSite -Title $NewSiteTitle -Url $NewSiteUrl -Owner $TargetNewSiteOwnerEmail -Connection $TargetTenantConnection
+    New-PnPSite -Type CommunicationSite -Title $NewSiteTitle -Url $NewSiteUrl -Owner $TargetNewSiteOwnerEmail -Connection $TargetTenantConnection -Verbose
     Write-Host "Created new site with url: "$NewSiteUrl
 
     # Letting the user turn the custom scripts on
