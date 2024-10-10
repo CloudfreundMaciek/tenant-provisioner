@@ -30,13 +30,13 @@ try {
     Write-Host "Log in to the source site."
     $SourceSiteConnection = Connect-PnPOnline -Url $SourceSiteURL -ManagedIdentity -ReturnConnection -UserAssignedManagedIdentityClientId $source_tenant_app_id
 
-    Write-Host "Log in to the target site."
-    $TargetTenantConnection = Connect-PnPOnline -URL $TargetTenantURL -ManagedIdentity -ReturnConnection -UserAssignedManagedIdentityClientId $target_tenant_app_id
+    # Write-Host "Log in to the target site."
+    # $TargetTenantConnection = Connect-PnPOnline -URL $TargetTenantURL -ManagedIdentity -ReturnConnection -UserAssignedManagedIdentityClientId $target_tenant_app_id
     
     # Creating requested site
-    Write-Host "Creating new site at " $NewSiteUrl
-    New-PnPSite -Type CommunicationSite -Classification "CommunicationSite" -SiteDesign Blank -Wait -TimeZone UTCPLUS0100_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA -Description "New site" -Lcid 1033 -PreferredDataLocation DEU -Title $NewSiteTitle -Url $NewSiteUrl -Owner $TargetNewSiteOwnerEmail -Connection $TargetTenantConnection -Verbose
-    Write-Host "Created new site with url: "$NewSiteUrl
+    # Write-Host "Creating new site at " $NewSiteUrl
+    # New-PnPSite -Type CommunicationSite -Classification "CommunicationSite" -SiteDesign Blank -Wait -TimeZone UTCPLUS0100_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA -Description "New site" -Lcid 1033 -PreferredDataLocation DEU -Title $NewSiteTitle -Url $NewSiteUrl -Owner $TargetNewSiteOwnerEmail -Connection $TargetTenantConnection -Verbose
+    # Write-Host "Created new site with url: "$NewSiteUrl
 
     # Letting the user turn the custom scripts on
     # Write-Host "Turn the scripts on the target site now on."
