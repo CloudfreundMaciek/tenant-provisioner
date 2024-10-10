@@ -15,8 +15,9 @@ $body = "This HTTP triggered function executed successfully. Pass a name in the 
 # Getting the urls and site name
     $SourceSiteURL = $Request.Body.SourceSiteUrl #Read-Host "Enter the source site url"
     $TargetTenantURL = $Request.Body.TargetTenantUrl #Read-Host "Enter the target tenant's site (e. g. https://sgtqr.sharepoint.com)"
-    $NewSiteTitle = $Request.Body.TargetNewSiteTitle   
     $TargetTenantAppId = $Request.Body.TargetTenantAppId   
+    $TargetNewSiteOwnerEmail = $Request.Body.TargetNewSiteOwnerEmail
+    $NewSiteTitle = $Request.Body.TargetNewSiteTitle   
 
 $NewSiteUrl = $TargetTenantURL + "/sites/" + $NewSiteTitle
 $source_tenant_app_id = "7a479457-a9ff-497f-be5f-40049df14d58"
@@ -34,7 +35,7 @@ try {
     
     # Creating requested site
     Write-Host "Creating new site."
-    New-PnPSite -Type CommunicationSite -Title $NewSiteTitle -Url $NewSiteUrl -Connection $TargetTenantConnection
+    New-PnPSite -Type CommunicationSite -Title $NewSiteTitle -Url $NewSiteUrl -Owner $TargetNewSiteOwnerEmail -Connection $TargetTenantConnection
     Write-Host "Created new site with url: "$NewSiteUrl
 
     # Letting the user turn the custom scripts on
