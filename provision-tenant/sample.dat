@@ -1,4 +1,6 @@
 {
-    "AppId": "b8873890-d519-40ef-bce5-63dae57640f2",
-    "SiteUrl": "https://m365x62567233.sharepoint.com"
+  "TargetTenantAppId": "7a479457-a9ff-497f-be5f-40049df14d58",
+  "TargetTenantUrl": "https://sgtqr.sharepoint.com/",
+  "TargetNewSiteTitle": "tt1",
+  "SourceSiteUrl": "https://sgtqr.sharepoint.com/sites/Messe"
 }
