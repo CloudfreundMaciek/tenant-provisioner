@@ -4,5 +4,5 @@
 @{
     # For latest supported version, go to 'https://www.powershellgallery.com/packages/Az'. Uncomment the next line and replace the MAJOR_VERSION, e.g., 'Az' = '5.*'
     # 'Az' = 'MAJOR_VERSION.*'
-    'PnP.PowerShell' = '2.*'
+    # 'PnP.PowerShell' = '2.*'
 }
