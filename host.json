@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "functionTimeout": "00:9:59",
+  "functionTimeout": "00:09:59",
   "logging": {
     "applicationInsights": {
       "samplingSettings": {
@@ -14,6 +14,6 @@
     "version": "[4.*, 5.0.0)"
   },
   "managedDependency": {
-    "enabled": true
+    "enabled": false
   }
 }
