@@ -49,7 +49,7 @@ try {
     # Copying the template and script
     #Set-PnPTenantSite -Url $SourceSiteURL -DenyAddAndCustomizePages:$false -Connection $SourceSiteConnection
     Write-Host "Getting the template"
-    $Template = Get-PnPSiteTemplate -OutputInstance -ListsToExtract "DA1EF9AB-E1F6-40CA-A798-0E3B3566ACF9", "664833a2-2b0d-484a-9ad4-179f18a6882e", "069dac20-2fd8-4549-b967-b886f5a29201", "dab8ca49-f92c-430f-8579-e3f7785905a1", "6b265a97-d0f7-44a3-b5fb-c2fefe761d76", "d6babeb0-eaf5-41f9-8e8a-608175230702" -IncludeNativePublishingFiles -ExcludeContentTypesFromSyndication -ExcludeHandlers SiteSecurity -Connection $SourceSiteConnection -PersistBrandingFiles -PersistPublishingFiles #-IncludeAllPages
+    $Template = Get-PnPSiteTemplate -Verbose -Debug -OutputInstance -ListsToExtract "DA1EF9AB-E1F6-40CA-A798-0E3B3566ACF9", "664833a2-2b0d-484a-9ad4-179f18a6882e", "069dac20-2fd8-4549-b967-b886f5a29201", "dab8ca49-f92c-430f-8579-e3f7785905a1", "6b265a97-d0f7-44a3-b5fb-c2fefe761d76", "d6babeb0-eaf5-41f9-8e8a-608175230702" -IncludeNativePublishingFiles -ExcludeContentTypesFromSyndication -ExcludeHandlers SiteSecurity -Connection $SourceSiteConnection -PersistBrandingFiles -PersistPublishingFiles #-IncludeAllPages
     # $Script = Get-PnPSiteScriptFromWeb -Url $SourceSiteURL -IncludeAll -Connection $SourceSiteConnection
     Write-Host "Got the template and script!"
     
